@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "cron-interpreter"
+version = "0.1.0"
+description = ""
+authors = ["chineduCoded <chinedujohn17@gmail.com>"]
+readme = "README.md"
+packages = [
+    {"include" = "app", "from" = "."}
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.112.1"}
+uvicorn = {extras = ["standard"], version = "^0.30.6"}
+croniter = "^3.0.3"
+pydantic = "^2.8.2"
+cron-descriptor = "^1.4.5"
+loguru = "^0.7.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
